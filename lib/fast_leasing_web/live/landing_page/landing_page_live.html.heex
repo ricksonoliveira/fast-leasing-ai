@@ -1,1 +1,39 @@
-Hello Fast Leasing
+<div class="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-5 md:px-0">
+  <div class="flex flex-col items-center max-w-2xl md:px-8">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div>
+        <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+          Fast Leasing Simulator
+        </p>
+      </div>
+      <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        Faça o orçamento do seu veiculo dos sonhos agora!
+      </h2>
+      <p class="text-base text-gray-700 md:text-lg">
+        A Open IA vai te ajudar a encontrar o melhor plano de financiamento.
+      </p>
+      <p class="text-base text-gray-700 md:text-lg">
+        Tudo isso sem atrapalhar seu score, e melhor, é bank-free!
+      </p>
+    </div>
+    <button
+      type="submit"
+      class="inline-flex items-center justify-between w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none"
+      onclick="scrollToForm()"
+    >
+      Simule com a IA agora!
+    </button>
+  </div>
+  <img src={~p"/images/order-car.png"} class="w-full max-w-screen-sm mx-auto rounded md:w-auto lg:max-w-screen-md" alt="" />
+  <section>
+    <div id="form-container">
+        <.live_component module={LeasingFormLive}, id="leasing-form"/>
+    </div>
+  </section>
+    <script>
+      function scrollToForm() {
+        const element = document.getElementById("form-container");
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+</div>
